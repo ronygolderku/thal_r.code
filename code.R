@@ -218,3 +218,25 @@ library(patchwork)
 plot<-p5 + p6+p7+p8+plot_layout(ncol = 2)
 plot
 ggsave("YSSTmComparision.png",plot, dpi = 700)
+
+
+#Validation plot
+drifter <- read_csv("VA2.csv")
+ggplot(data =drifter, 
+       aes(x = drifter$MOD, y =drifter$SST))+
+  geom_point()+
+  geom_smooth(fill = "green", col = "red")+
+  theme(panel.background = element_rect(colour=1, fill = "transparent"),
+        axis.text = element_text(colour = 1, size = 12, family = "serif"), 
+        axis.title = element_text(colour = 1, size = 14, family = "serif"))+
+  #geom_text(aes(x = 25.5, y = 29.5, 
+                #label = paste("RSq = ", 0.28)), size = 4, family = "serif")+
+  annotate("text", x =25, y=30, label = "italic(R)^2== 0.28", parse=TRUE, size=4,family = "serif")+
+  annotate("text", x =25.2, y=29.5, label = "italic(p)== 1.5e-05", parse=TRUE,size=4,family = "serif")+
+  annotate("text", x =25, y=29, label = "italic(r)== 0.54", parse=TRUE, size=4,family = "serif")+
+  annotate("text", x =25, y=28.5, label = "italic(N)== 56", parse=TRUE, size=4,family = "serif")+
+  scale_x_continuous(breaks = seq(22,31, 1))+ 
+  scale_y_continuous(breaks = seq(24,30, 1))+
+  labs(y=expression(~MODIS~Terra~SST~(~degree~C)),
+       x=expression(~italic(In-situ)~Temperature~(~degree~C)))
+ggsave("Val.png", dpi = 300)
