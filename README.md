@@ -4,6 +4,9 @@
 [![Researchgate Badge](http://www.researchgate.net/favicon.ico)](https://www.researchgate.net/profile/Md-Golder)
 [![LinkedIn Badge](https://img.shields.io/badge/connect-LinkedIn-blue)](https://www.linkedin.com/in/ronygolder/)
 --
+### This repository contains the R code of the paper titled 'Daytime and Nighttime Sea Surface Temperature (SST) along with Diurnal Variability (D-SST) in the Northern Bay of Bengal: A Remote Sensing Approach' published by Thalassas: An International journal of Marine Science, Springer Nature. <br>
+doi: https://doi.org/10.1007/s41208-022-00406-8
+-
 ### Hi there 👋
 
 Md Rony Golder, a motivated and an ambitious Oceanographer, has recently completed his MSc in Coastal and Marine Science from [Khulna University](https://ku.ac.bd/). He is especially interested in the biological and ecological phenomena of the ocean. He is specialized in satellite data processing, statistical analysis, and scientific writing. He is looking for a funded Ph.D.opportunity.
